@@ -1,0 +1,15 @@
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+        char[] a=new char[26];
+        int index=0;
+        for(int i='a';i<='z';i++){
+            a[index++]=(char)i;
+        }
+        for(char c:a){
+            if(!sentence.contains(String.valueOf(c))){
+                return false;
+            }
+        }
+        return true;
+    }
+}
